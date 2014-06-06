@@ -1,0 +1,470 @@
+2014/06/05 12:29:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstar.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2014/06/05 12:30:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_project' already exists. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text NOT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB.
+2014/06/05 12:30:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_project' already exists. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text NOT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB' in /var/www/html/YiiRoot/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/db/CDbCommand.php(1324): CDbCommand->execute()
+#1 /var/www/html/YiiRoot/framework/db/CDbMigration.php(233): CDbCommand->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#2 /var/www/html/trackstar/protected/migrations/m140605_042402_create_project_table.php(15): CDbMigration->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#3 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(385): m140605_042402_create_project_table->up()
+#4 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m140605_042402_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /var/www/html/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /var/www/html/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /var/www/html/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#10 /var/www/html/YiiRoot/framework/yiic.php(33): CApplication->run()
+#11 /var/www/html/trackstar/protected/yiic.php(7): require_once('/var/www/html/Y...')
+#12 /var/www/html/trackstar/protected/yiic(4): require_once('/var/www/html/t...')
+#13 {main}
+---
+2014/06/05 12:43:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:43:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:43:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:43:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:43:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:43:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:43:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:46:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:46:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:46:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:46:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:46:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:46:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:51:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:51:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:51:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:51:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:51:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:51:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:51:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 12:51:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/html/YiiRoot/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=gii
+---
+2014/06/05 13:18:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/html/YiiRoot/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/html/YiiRoot/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/YiiRoot/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/YiiRoot/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/YiiRoot/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/YiiRoot/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('project/admin')
+#9 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/trackstar/index.php?r=project/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project
+---
+2014/06/05 14:27:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_project' already exists. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text NOT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB.
+2014/06/05 14:27:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_project' already exists. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text NOT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB' in /var/www/html/YiiRoot/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/db/CDbCommand.php(1324): CDbCommand->execute()
+#1 /var/www/html/YiiRoot/framework/db/CDbMigration.php(233): CDbCommand->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#2 /var/www/html/trackstar/protected/migrations/m140605_042402_create_project_table.php(15): CDbMigration->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#3 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(385): m140605_042402_create_project_table->up()
+#4 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m140605_042402_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /var/www/html/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /var/www/html/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /var/www/html/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#10 /var/www/html/YiiRoot/framework/yiic.php(33): CApplication->run()
+#11 /var/www/html/trackstar/protected/yiic.php(7): require_once('/var/www/html/Y...')
+#12 /var/www/html/trackstar/protected/yiic(4): require_once('/var/www/html/t...')
+#13 {main}
+---
+2014/06/05 14:56:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstar.tbl_project_user_
+			assignment' doesn't exist. The SQL statement executed was: ALTER TABLE `tbl_project_user_
+			assignment` ADD CONSTRAINT `fk_user_project` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT.
+2014/06/05 14:56:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstar.tbl_project_user_
+			assignment' doesn't exist. The SQL statement executed was: ALTER TABLE `tbl_project_user_
+			assignment` ADD CONSTRAINT `fk_user_project` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT' in /var/www/html/YiiRoot/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/db/CDbCommand.php(1435): CDbCommand->execute()
+#1 /var/www/html/YiiRoot/framework/db/CDbMigration.php(348): CDbCommand->addForeignKey('fk_user_project', 'tbl_project_use...', 'user_id', 'tbl_user', 'id', 'CASCADE', 'RESTRICT')
+#2 /var/www/html/trackstar/protected/migrations/m140605_053710_create_issue_user_and_assignment_tables.php(59): CDbMigration->addForeignKey('fk_user_project', 'tbl_project_use...', 'user_id', 'tbl_user', 'id', 'CASCADE', 'RESTRICT')
+#3 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(385): m140605_053710_create_issue_user_and_assignment_tables->up()
+#4 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m140605_053710_...')
+#5 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(220): MigrateCommand->actionUp(Array)
+#6 [internal function]: MigrateCommand->actionTo(Array)
+#7 /var/www/html/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#8 /var/www/html/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#9 /var/www/html/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#10 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#11 /var/www/html/YiiRoot/framework/yiic.php(33): CApplication->run()
+#12 /var/www/html/trackstar/protected/yiic.php(7): require_once('/var/www/html/Y...')
+#13 /var/www/html/trackstar/protected/yiic(4): require_once('/var/www/html/t...')
+#14 {main}
+---
+2014/06/05 15:05:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_issue' already exists. The SQL statement executed was: CREATE TABLE `tbl_issue` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text,
+	`project_id` int(11) DEFAULT NULL,
+	`type_id` int(11) DEFAULT NULL,
+	`status_id` int(11) DEFAULT NULL,
+	`owner_id` int(11) DEFAULT NULL,
+	`requester_id` int(11) DEFAULT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB.
+2014/06/05 15:05:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_issue' already exists. The SQL statement executed was: CREATE TABLE `tbl_issue` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text,
+	`project_id` int(11) DEFAULT NULL,
+	`type_id` int(11) DEFAULT NULL,
+	`status_id` int(11) DEFAULT NULL,
+	`owner_id` int(11) DEFAULT NULL,
+	`requester_id` int(11) DEFAULT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB' in /var/www/html/YiiRoot/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/db/CDbCommand.php(1324): CDbCommand->execute()
+#1 /var/www/html/YiiRoot/framework/db/CDbMigration.php(233): CDbCommand->createTable('tbl_issue', Array, 'ENGINE=InnoDB')
+#2 /var/www/html/trackstar/protected/migrations/m140605_053710_create_issue_user_and_assignment_tables.php(21): CDbMigration->createTable('tbl_issue', Array, 'ENGINE=InnoDB')
+#3 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(385): m140605_053710_create_issue_user_and_assignment_tables->up()
+#4 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m140605_053710_...')
+#5 /var/www/html/YiiRoot/framework/cli/commands/MigrateCommand.php(220): MigrateCommand->actionUp(Array)
+#6 [internal function]: MigrateCommand->actionTo(Array)
+#7 /var/www/html/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#8 /var/www/html/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#9 /var/www/html/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#10 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#11 /var/www/html/YiiRoot/framework/yiic.php(33): CApplication->run()
+#12 /var/www/html/trackstar/protected/yiic.php(7): require_once('/var/www/html/Y...')
+#13 /var/www/html/trackstar/protected/yiic(4): require_once('/var/www/html/t...')
+#14 {main}
+---
+2014/06/05 15:56:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /var/www/html/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#1 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=user
+---
+2014/06/05 15:56:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /var/www/html/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#1 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=user
+---
+2014/06/06 10:54:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "issue".' in /var/www/html/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('issue')
+#1 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=issue
+---
+2014/06/06 10:54:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "issues".' in /var/www/html/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('issues')
+#1 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=issues
+---
+2014/06/06 10:55:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "issue/index.php".' in /var/www/html/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/index.php')
+#1 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index.php
+---
+2014/06/06 10:55:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "issue".' in /var/www/html/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('issue')
+#1 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=issue
+---
+2014/06/06 11:39:32 [error] [exception.CException] exception 'CException' with message 'Property "User.confirmPassword" is not defined.' in /var/www/html/YiiRoot/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/db/ar/CActiveRecord.php(145): CComponent->__get('confirmPassword')
+#1 /var/www/html/YiiRoot/framework/validators/CCompareValidator.php(92): CActiveRecord->__get('confirmPassword')
+#2 /var/www/html/YiiRoot/framework/validators/CValidator.php(213): CCompareValidator->validateAttribute(Object(User), 'password')
+#3 /var/www/html/YiiRoot/framework/base/CModel.php(159): CValidator->validate(Object(User), NULL)
+#4 /var/www/html/YiiRoot/framework/db/ar/CActiveRecord.php(805): CModel->validate(NULL)
+#5 /var/www/html/trackstar/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /var/www/html/YiiRoot/framework/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /var/www/html/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/YiiRoot/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/YiiRoot/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/html/YiiRoot/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/html/YiiRoot/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/html/YiiRoot/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/html/YiiRoot/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/html/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/html/trackstar/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/trackstar/index.php?r=user/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=user/create
+---
+2014/06/06 11:48:09 [error] [exception.CException] exception 'CException' with message 'Property "User.password_repeat" is not defined.' in /var/www/html/YiiRoot/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password_repeat')
+#1 /var/www/html/YiiRoot/framework/validators/CRequiredValidator.php(58): CActiveRecord->__get('password_repeat')
+#2 /var/www/html/YiiRoot/framework/validators/CValidator.php(213): CRequiredValidator->validateAttribute(Object(User), 'password_repeat')
+#3 /var/www/html/YiiRoot/framework/base/CModel.php(159): CValidator->validate(Object(User), NULL)
+#4 /var/www/html/YiiRoot/framework/db/ar/CActiveRecord.php(805): CModel->validate(NULL)
+#5 /var/www/html/trackstar/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /var/www/html/YiiRoot/framework/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /var/www/html/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/YiiRoot/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/YiiRoot/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/html/YiiRoot/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/html/YiiRoot/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/html/YiiRoot/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/html/YiiRoot/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/html/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/YiiRoot/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/html/trackstar/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/trackstar/index.php?r=user/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=user/create
+---
+2014/06/06 12:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /var/www/html/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /var/www/html/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=login/index
+---
